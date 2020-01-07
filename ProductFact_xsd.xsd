@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="ProductsFact">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="Dim_customers" minOccurs="1" maxOccurs="unbounded" />
+<xsd:element ref="Dim_orders" minOccurs="1" maxOccurs="unbounded" />
+<xsd:element ref="Dim_ordersdetails" minOccurs="1" maxOccurs="unbounded" />
+<xsd:element ref="Dim_products" minOccurs="1" maxOccurs="unbounded" />
+<xsd:element ref="ProductsFact" minOccurs="1" maxOccurs="unbounded" />
+</xsd:seque
+</xsd:complexType>
+<xsd:key name="orderNumber">
+<xsd:selector xpath="Dim_orders/orderNumber" />
+<xsd:field xpath="." />
+</xsd:key>
+<xsd:keyref name="orderNumber_ref" refer="orderNumber">
+<xsd:selector xpath="ProductFact/orderNumber" />
+<xsd:field xpath="." />
+</xsd:keyref>
+<xsd:key name="customerNumber">
+<xsd:selector xpath="Dim_customers/customerNumber" />
+<xsd:field xpath="." />
+</xsd:key>
+<xsd:keyref name="customerNumber_ref" refer="customerNumber">
+<xsd:selector xpath="ProductFact/customerNumber" />
+<xsd:field xpath="." />
+</xsd:keyref>
+<xsd:key name="productCode">
+<xsd:selector xpath="Dim_products/productcode" />
+<xsd:field xpath="." />
+</xsd:key>
+<xsd:keyref name="productCode_ref" refer="productCode">
+<xsd:selector xpath="ProductFact/productCode" />
+<xsd:field xpath="." />
+</xsd:keyref>
+<xsd:key name="order_id">
+<xsd:selector xpath="Dim_orderdetails/order_id" />
+<xsd:field xpath="." />
+</xsd:key>
+<xsd:keyref name="order_id_ref" refer="order_id">
+<xsd:selector xpath="ProductFact/order_id" />
+<xsd:field xpath="." />
+</xsd:keyref>
+</xsd:element>
+<xsd:element name="Dim_orders">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="orderNumber" type="xsd:int" />
+<xsd:element name="orderDate" type="xsd:date" />
+<xsd:element name="requiredDate" type="xsd:date" />
+<xsd:element name="shippedDate" type="xsd:date" />
+<xsd:element name="status_name" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Dim_customers">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="customerNumber" type="xsd:int" />
+<xsd:element name="customerName" type="xsd:string" />
+<xsd:element name="contactLastName" type="xsd:string" />
+<xsd:element name="contactFirstName" type="xsd:string" />
+<xsd:element name="city" type="xsd:string" />
+<xsd:element name="country" type="xsd:string" />
+<xsd:element name="creditLimit" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Dim_ProductLines">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="p_id" type="xsd:int" />
+<xsd:element name="productLine" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Dim_products">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="productCode" type="xsd:int" />
+<xsd:element name="productName" type="xsd:string" />
+<xsd:element name="quantityInStock" type="xsd:int" />
+<xsd:element name="buyPrice" type="xsd:decimal" />
+<xsd:element name="MSRP" type="xsd:decimal" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Dim_orderdetails">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="order_id" type="xsd:int" />
+<xsd:element name="productCode" type="xsd:string" />
+<xsd:element name="quantityOrdered" type="xsd:int" />
+<xsd:element name="priceEach" type="xsd:decimal" />
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="ProductsFact">
+<xsd:complexType>
+<xsd:all>
+<xsd:element name="customerNumber" type="xsd:int" />
+<xsd:element name="productCode" type="xsd:string" />
+<xsd:element name="orderNumber" type="xsd:int" />
+<xsd:element name="order_id" type="xsd:int" />
+<xsd:element name="AvailabeQuantityofProducts" type="xsd:int" />
+<xsd:element name="creditLimitpercust" type="xsd:int" />
+</xsd:all>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

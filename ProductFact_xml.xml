@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<ProductsFact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ProductsFact.xsd">
+<Dim_customers>
+	<customerNumber>1</customerNumber>
+	<customerName>Atelier graphique</customerName>
+	<contactFirstName>Schmitt</contactFirstName>
+	<contactLastName>Carine</contactLastName>
+	<city>Nantes</city>
+	<country>France</country>
+	<creditLimit>21000.00</creditLimit>
+</Dim_customers>
+<Dim_customers>
+	<customerNumber>81</customerNumber>
+	<customerName>Extreme Desk Decorations, Ltd</customerName>
+	<contactFirstName>McRoy</contactFirstName>
+	<contactLastName>Sarah</contactLastName>
+	<city>Wellington	</city>
+	<country>New Zealand</country>
+	<creditLimit>86800.00</creditLimit>
+</Dim_customers>
+
+<Dim_orderdetails>
+	<order_id>68</order_id>
+	<productCode>S700_2466</productCode>
+	<quantityOrdered>34</quantityOrdered>
+	<priceEach>99.71</priceEach>
+</Dim_orderdetails>
+ <Dim_orderdetails>
+	<order_id>100</order_id>
+	<productCode>S18_3232</productCode>
+	<quantityOrdered>46</quantityOrdered>
+	<priceEach>160.87</priceEach>	
+</Dim_orderdetails>
+
+  <Dim_products>
+	<productCode>S18_3233</productCode>
+	<productName>1985 Toyota Supra</productName>
+	<productLine>Classic Cars</productLine>
+	<quantityInStock>7733</quantityInStock>
+	<buyPrice>57.00</buyPrice>
+	<MSRP>107.56</MSRP>
+  </Dim_products>
+ <Dim_products>
+	<productCode>S700_4002</Product_key>
+	<productName>American Airlines: MD-11S</productName>
+	<productLine>Planes</productLine>
+	<quantityInStock>8820</quantityInStock>
+	<buyPrice>36.27</buyPrice>
+	<MSRP>74.03</MSRP>
+  </Dim_products>
+  
+  <Dim_orders>
+	<orderNumber>991</orderNumber>
+	<orderDate>2003-06-16</orderDate>
+	<requiredDate>2003-11-17</requiredDate>
+	<shippedDate>2003-11-13</shippedDate>
+	<status_name>Cancelled</status_name>
+  </Dim_orders>
+   <Dim_orders>
+	<orderNumber>80</orderNumber>
+	<orderDate>2003-11-11</orderDate>
+	<requiredDate>10353</requiredDate>
+	<shippedDate>38</shippedDate>
+	<status_name>210.80</status_name>
+  </Dim_orders>
+  
+  <ProductsFact>
+    <customerNumber>259</customerNumber>
+    <productCode>S24_4620</productCode>
+    <orderNumber>10191</orderNumber>
+	<order_id>863</order_id>
+	<AvailableQuantityOfProducts>7869</AvailableQuantityOfProducts>
+	<creditLimitpercust>120400</creditLimitpercust>
+  </ProductsFact>
+  <ProductsFact>
+    <customerNumber>103</customerNumber>
+    <productCode>S18_3685</productCode>
+    <orderNumber>10123</orderNumber>
+	<order_id>213</order_id>
+	<AvailableQuantityOfProducts>8990</AvailableQuantityOfProducts>
+	<creditLimitpercust>21000</creditLimitpercust>
+  </ProductsFact>	
+  
+</ProductsFact>
+  
